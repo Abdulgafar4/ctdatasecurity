@@ -25,7 +25,7 @@ const Navbar = () => {
         setData(items);
       }
     }, []);
-
+//  console.log(items.description)
 	// const res = items.map(item => item.response)
 	// console.log(res)
 
@@ -76,7 +76,8 @@ const Navbar = () => {
                     </NavLinks>
                   </NavItem>
                 ))
-              : data.map((el, index) => (
+              :
+               data.map((el, index) => (
                   <NavItem key={index}>
                     <NavLinks onClick={() => closeMobileMenu(el.to, el.id)}>
                       {el.text}
